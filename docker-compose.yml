@@ -1,0 +1,28 @@
+---
+version: "3.7"
+services:
+  sftp:
+    image: perbohlin/simple-sftp:test
+    container_name: simple-sftp
+    restart: always
+    expose:
+      - 22
+    ports:
+      - "8022:22"
+    volumes:
+      - simple-sftp-hostkeys:/etc/ssh/sshd_host_keys
+      - simple-sftp-data:/data
+      - simple-sftp-keys:/keys
+    healthcheck:
+      test: "ps aux | grep /usr/sbin/sshd"
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  simple-sftp-hostkeys:
+    name: simple-sftp-hostkeys
+  simple-sftp-data:
+    name: simple-sftp-data
+  simple-sftp-keys:
+    name: simple-sftp-keys

@@ -1,0 +1,28 @@
+# Configuration inspired by: https://infosec.mozilla.org/guidelines/openssh
+
+Protocol 2
+HostKey /etc/ssh/sshd_host_keys/ssh_host_ed25519_key
+HostKey /etc/ssh/sshd_host_keys/ssh_host_rsa_key
+
+UseDNS no
+
+# Limited access
+PermitRootLogin no
+X11Forwarding no
+AllowTcpForwarding no
+
+# Authentication methods
+AuthenticationMethods publickey
+PubkeyAuthentication yes
+
+# Restrict to single user
+AllowUsers upload
+IgnoreRhosts yes
+
+# Force sftp and chroot jail
+ChrootDirectory /data
+Subsystem sftp internal-sftp -d /publish
+ForceCommand internal-sftp -d /publish
+
+# Enable this for more logs
+# LogLevel VERBOSE

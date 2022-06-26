@@ -1,0 +1,21 @@
+Usage: make TARGET ARGS
+
+    help                Print this help.
+    make-help           Print targets related to development of the make-system
+    readme              Print README.
+
+Image:
+    image               Build docker image.
+    tag                 Tag the test image as latest
+    publish             (tag and) push the image to docker registry
+    IMAGE=perbohlin/simple-sftp TAG=test
+
+Development:
+    check               Run static, test.
+    test                Run all unit test.
+    static              Run static code analysis.
+    clean               Remove build-artifacts.
+    cleanup             Remove all produced artifacts including docker assets.
+    dev-shell           Start shell for interactive development/testing of scripts
+
+Set Q= to echo commands when run

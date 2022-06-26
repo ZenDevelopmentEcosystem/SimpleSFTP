@@ -1,0 +1,1 @@
+include maketools/init.mk
