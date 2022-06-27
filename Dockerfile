@@ -10,6 +10,8 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
     && ln -s /usr/sbin/sshd.pam /usr/sbin/sshd \
     && mkdir -p /var/run/sshd \
     && rm -f /etc/ssh/ssh_host_*key* \
+    && mkdir -p /etc/ssh/sshd_host_keys \
+    && chmod 700 /etc/ssh/sshd_host_keys \
     && groupadd --gid 101 upload \
     && useradd --non-unique --uid 100 --gid 101 upload \
     && usermod -p "*" upload \

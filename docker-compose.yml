@@ -14,7 +14,7 @@ services:
       - simple-sftp-data:/data
       - simple-sftp-keys:/keys
     healthcheck:
-      test: "ps aux | grep /usr/sbin/sshd"
+      test: "nc -z localhost 22"
       interval: 5s
       timeout: 10s
       retries: 5
