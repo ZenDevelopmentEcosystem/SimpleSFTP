@@ -10,7 +10,7 @@ docker pull perbohlin/simple-sftp
 User
 ----
 
-The sftp user `upload` (the only user with access) has UID 101, GID 101.
+The sftp user `upload` (the only user with access) has UID 100, GID 101.
 
 Place the authorized keys in a directory and mount it as `/keys`. On startup, all
 the files will be concatenated into the `upload`-user's authorized_keys file.
