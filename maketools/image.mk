@@ -20,4 +20,4 @@ down:
 env-file: $(ROOT.dir)/.env
 
 $(ROOT.dir)/.env:
-	$(Q)touch "$(<)"
+	$(Q)touch "$(@)"
