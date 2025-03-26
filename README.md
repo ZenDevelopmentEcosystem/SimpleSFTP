@@ -9,7 +9,7 @@ Docker
 The official docker image:
 
 ```console
-docker pull perbohlin/simple-sftp
+docker pull ghcr.io/zendevelopmentecosystem/simplesftp:latest
 ```
 
 Documentation

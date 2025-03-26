@@ -1,4 +1,4 @@
-IMAGE := perbohlin/simple-sftp
+IMAGE := ghcr.io/zendevelopmentecosystem/simplesftp
 TAG := test
 
 image:
