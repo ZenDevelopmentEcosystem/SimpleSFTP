@@ -14,6 +14,8 @@ AllowTcpForwarding no
 # Authentication methods
 AuthenticationMethods publickey
 PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
 
 # Restrict to single user
 AllowUsers upload
