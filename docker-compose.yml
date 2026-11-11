@@ -1,7 +1,7 @@
 ---
 services:
   sftp:
-    image: perbohlin/simple-sftp:test
+    image: ghcr.io/zendevelopmentecosystem/simplesftp:test
     container_name: simple-sftp
     restart: always
     expose:

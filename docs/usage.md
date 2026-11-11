@@ -4,7 +4,7 @@ Usage
 The official docker image:
 
 ```console
-docker pull perbohlin/simple-sftp
+docker pull ghcr.io/zendevelopmentecosystem/simplesftp
 ```
 
 User
@@ -23,7 +23,7 @@ owned by the `upload`-user.
 Example usage (id_rsa.pub has been placed in the mount `/keys`):
 
 ```console
-docker run --rm -d -v"./keys:/keys" -v"./data:/data" -v"./hostkeys:/etc/ssh/sshd_host_keys" -p"2222:22 perbohlin/simple-sftp
+docker run --rm -d -v"./keys:/keys" -v"./data:/data" -v"./hostkeys:/etc/ssh/sshd_host_keys" -p"2222:22 ghcr.io/zendevelopmentecosystem/simplesftp
 sftp -i id_rsa -P 2222 upload@localhost
 ```
 
