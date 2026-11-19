@@ -6,9 +6,11 @@ image:
 		-t $(IMAGE):$(TAG)
 
 tag:
+	$(Q)docker tag $(IMAGE):$(TAG) $(IMAGE):$(VERSION)
 	$(Q)docker tag $(IMAGE):$(TAG) $(IMAGE):latest
 
 publish: tag
+	$(Q)docker push $(IMAGE):$(VERSION)
 	$(Q)docker push $(IMAGE):latest
 
 up: env-file
